@@ -1,0 +1,54 @@
+
+
+Suppose you want to calculate "10 + 5 - 2 * 3 / 2" using the calculator.
+
+Initial State:
+
+The firstOperand is initially empty.
+The displayValue is also initially empty, and the display on the calculator is blank.
+Entering Numbers:
+
+You start by clicking numbers on the calculator: "1", "0", "5".
+The appendToDisplay() function appends these numbers to displayValue.
+The display now shows "105".
+The firstOperand is still empty.
+Adding the First Operator:
+
+You then click the "+" operator button.
+The appendOperator() function is called. It checks that there's no existing operator, so it sets firstOperand to the current displayValue (which is "105"), clears the displayValue, and sets the operator to "+".
+The firstOperand now holds "105", and the displayValue is cleared. The display is still empty.
+Entering More Numbers:
+
+You continue by clicking numbers: "2", "3", "2".
+The appendToDisplay() function appends these numbers to displayValue.
+The display now shows "232".
+Adding the Second Operator:
+
+You click the "*" operator button.
+The appendOperator() function is called. Since there is an existing operator ("+"), it calculates the result of the previous operation ("105 + 232") and sets firstOperand to the result. The displayValue is cleared, and the operator is set to "*".
+The firstOperand now holds "337" (result of the previous addition), and the displayValue is cleared. The display is still empty.
+Entering More Numbers:
+
+You continue by clicking numbers: "3", "2".
+The appendToDisplay() function appends these numbers to displayValue.
+The display now shows "32".
+Adding the Third Operator:
+
+You click the "/" operator button.
+The appendOperator() function is called. Since there is an existing operator ("*"), it calculates the result of the previous operation ("337 * 32") and sets firstOperand to the result. The displayValue is cleared, and the operator is set to "/".
+The firstOperand now holds "10784" (result of the previous multiplication), and the displayValue is cleared. The display is still empty.
+Finishing the Calculation:
+
+You continue by clicking numbers: "2".
+The appendToDisplay() function appends "2" to displayValue.
+The display now shows "2".
+Calculating the Final Result:
+
+You click the "=" operator button.
+The calculateResult() function is called. It checks that there's an existing operator ("/") and performs the operation using the operate() function.
+The result of "10784 / 2" is calculated, and the firstOperand is cleared. The displayValue now holds the final result "5392," which is displayed on the calculator.
+In summary, the firstOperand variable is used to store the first number or operand when an operator is selected, and it is used in conjunction with the operator variable to perform arithmetic calculations step by step. The calculator handles multiple operations and keeps track of intermediate results.
+
+
+
+
